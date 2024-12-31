@@ -1,0 +1,14 @@
+{
+  "host":"HNVV00071",
+  "db":"wibrpa-autonomous-beta",
+  "user":"executor",
+  "passwd":"I19LahsUkL4103rW",
+
+  "interval":30,
+  "duration":5,
+
+  "To": "RPA.Support@zf.com",
+  "Cc":"loganathan.vr@zf.com, sabarish.murugan@zf.com",
+  "smtp": "FRD-MAIL.EMEA.ZF-WORLD.COM:587",
+  "smtp_auth": "India#2025"
+}
