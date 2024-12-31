@@ -4,7 +4,7 @@
   "user":"executor",
   "passwd":"I19LahsUkL4103rW",
 
-  "interval":30,
+  "interval":20,
   "duration":5,
 
   "To": "RPA.Support@zf.com",

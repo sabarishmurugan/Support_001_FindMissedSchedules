@@ -229,10 +229,10 @@ if __name__ == "__main__":
             to = system_asset[0]['value']
             cc = ""
             host = system_asset[1]['value']
-            db = system_asset[2]['db']
+            db = system_asset[2]['value']
             user = system_asset[3]['value']
-            passwd = system_asset[4]['passwd']
-            duration = system_asset[5]['duration']
+            passwd = system_asset[4]['value']
+            duration = int(system_asset[5]['value'])
             
             smtp = obj_frame.MailData('smtp_authentication')
             smtp_auth = obj_frame.MailData('password')
@@ -254,7 +254,7 @@ if __name__ == "__main__":
         report_path = Root+"Report\\"
         report_file = report_path+"Report_"+str(now)+".xlsx"
         
-        delaytime = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=duration)).strftime("%Y-%m-%d %H:%M:%S")
+        delaytime = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=int(duration))).strftime("%Y-%m-%d %H:%M:%S")
         db_result = template.Getting_DB_Values(delaytime)
         db_count = len(db_result)
         pending_no = "Date:"+str(now)+" - No of Pendings --> "+str(db_count)
@@ -291,6 +291,7 @@ if __name__ == "__main__":
     try:
         obj_frame.immer_ai_Excelkill()
         template.Delete_Directories(folderlist=[Root])
+        "Success"
     except:
         pass
     
